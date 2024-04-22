@@ -43,8 +43,8 @@ flutter:
 
   #Local Assets
   assets:
-    - assets/icons
-    - assets/images
-    - assets/logos
+    - assets/icons/
+    - assets/images/
+    - assets/logos/
 
   # Fonts Assets
