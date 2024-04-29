@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iconsax/iconsax.dart';
 
 import '../../../../utils/constants/colors.dart';
 import '../../../../utils/constants/sizes.dart';
@@ -8,16 +9,18 @@ class SearchContainer extends StatelessWidget {
   const SearchContainer({
     super.key,
     required this.text,
-    this.icon,
+    this.icon = Iconsax.search_normal,
     this.showBackground = true,
     this.showBorder = true,
     this.onPressed,
+    this.padding,
   });
 
   final String text;
   final IconData? icon;
   final bool showBackground, showBorder;
   final VoidCallback? onPressed;
+  final EdgeInsetsGeometry? padding;
 
   @override
   Widget build(BuildContext context) {
@@ -26,14 +29,14 @@ class SearchContainer extends StatelessWidget {
     return GestureDetector(
       onTap: onPressed,
       child: Container(
-        margin: const EdgeInsets.symmetric(horizontal: TSizes.defaultSpace),
+        margin: padding,
         padding: const EdgeInsets.all(TSizes.md),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(TSizes.cardRadiusLg),
           color: showBackground
               ? isDarkMode
-                  ? TColors.black
-                  : TColors.white
+                  ? TColors.dark
+                  : TColors.light
               : Colors.transparent,
           border: showBorder ? Border.all(color: TColors.grey) : null,
         ),

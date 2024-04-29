@@ -3,14 +3,17 @@ import 'package:iconsax/iconsax.dart';
 import 'package:t_store/common/styles/shadow_style.dart';
 import 'package:t_store/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:t_store/common/widgets/images/rounded_image.dart';
+import 'package:t_store/common/widgets/texts/brand_title_text.dart';
 import 'package:t_store/common/widgets/texts/product_price_text.dart';
 import 'package:t_store/common/widgets/texts/product_title_text.dart';
 import 'package:t_store/utils/constants/colors.dart';
+import 'package:t_store/utils/constants/enums.dart';
 import 'package:t_store/utils/constants/image_strings.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
 
 import '../../icons/circular_icon.dart';
+import '../../texts/brand_title_text_with_verified_icon.dart';
 
 class ProductCardVertical extends StatelessWidget {
   const ProductCardVertical({super.key});
@@ -22,7 +25,6 @@ class ProductCardVertical extends StatelessWidget {
       onTap: () {},
       child: Container(
         width: 180,
-        padding: const EdgeInsets.all(3),
         decoration: BoxDecoration(
           color: isDarkMode ? TColors.darkerGrey : TColors.white,
           boxShadow: [
@@ -38,6 +40,7 @@ class ProductCardVertical extends StatelessWidget {
             //Image with discount icon and favorite icon
             RoundedContainer(
               height: 180,
+              margin: const EdgeInsets.all(3),
               padding: const EdgeInsets.all(TSizes.sm),
               backgroundColor: isDarkMode ? TColors.dark : TColors.light,
               child: Stack(
@@ -80,38 +83,24 @@ class ProductCardVertical extends StatelessWidget {
             ),
 
             //Product name & Product brand with verified badge
-            Padding(
-              padding: const EdgeInsets.only(left: TSizes.sm),
+            const Padding(
+              padding: EdgeInsets.only(left: TSizes.sm),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   //Product name
-                  const ProductTitleText(
+                  ProductTitleText(
                     title: "Green Nike Air Shoes",
                     smallSize: true,
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: TSizes.xs,
                   ),
 
                   //Product brand with verified badge
-                  Row(
-                    children: [
-                      Text(
-                        "Nike",
-                        style: Theme.of(context).textTheme.labelMedium,
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 1,
-                      ),
-                      const SizedBox(
-                        width: TSizes.xs,
-                      ),
-                      const Icon(
-                        Iconsax.verify5,
-                        color: TColors.primary,
-                        size: TSizes.iconXs,
-                      )
-                    ],
+                  BrandTitleTextWithVerifiedIcon(
+                    title: 'Nike',
+                    iconColor: TColors.primary,
                   ),
                 ],
               ),

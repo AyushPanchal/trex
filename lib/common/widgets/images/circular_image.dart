@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
 
-import '../../../utils/constants/colors.dart';
 import '../../../utils/constants/sizes.dart';
 
-class RoundedImage extends StatelessWidget {
-  const RoundedImage({
+class CircularImage extends StatelessWidget {
+  const CircularImage({
     super.key,
-    this.height,
-    this.width,
+    this.height = 56,
+    this.width = 56,
     required this.imageUrl,
     this.applyImageRadius = false,
     this.border,
     this.backgroundColor,
     this.fit = BoxFit.contain,
-    this.padding,
+    this.padding = const EdgeInsets.all(TSizes.sm),
     this.isNetworkImage = false,
     this.onPressed,
     this.borderRadius = TSizes.md,
+    this.overlayColor,
   });
 
   final double? height, width;
@@ -24,11 +24,12 @@ class RoundedImage extends StatelessWidget {
   final String imageUrl;
   final bool applyImageRadius;
   final BoxBorder? border;
-  final Color? backgroundColor;
+  final Color? backgroundColor, overlayColor;
   final BoxFit? fit;
-  final EdgeInsetsGeometry? padding;
+  final EdgeInsetsGeometry padding;
   final bool isNetworkImage;
   final VoidCallback? onPressed;
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -52,6 +53,7 @@ class RoundedImage extends StatelessWidget {
                 : AssetImage(
                     imageUrl,
                   ) as ImageProvider,
+            color: overlayColor,
             fit: fit,
           ),
         ),
