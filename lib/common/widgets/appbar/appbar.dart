@@ -2,17 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/device/device_utility.dart';
 
 class TAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const TAppBar(
-      {super.key,
-      this.title,
-      this.showBackArrow = false,
-      this.leadingIcon,
-      this.actions,
-      this.onLeadingIconPressed});
+  const TAppBar({
+    super.key,
+    this.title,
+    this.showBackArrow = false,
+    this.leadingIcon,
+    this.actions,
+    this.onLeadingIconPressed,
+  });
 
   final Widget? title;
   final bool showBackArrow;
@@ -28,7 +30,10 @@ class TAppBar extends StatelessWidget implements PreferredSizeWidget {
         leading: showBackArrow
             ? IconButton(
                 onPressed: () => Get.back(),
-                icon: const Icon(Iconsax.arrow_left),
+                icon: const Icon(
+                  Iconsax.arrow_left,
+                  color: TColors.darkGrey,
+                ),
               )
             : leadingIcon != null
                 ? IconButton(
