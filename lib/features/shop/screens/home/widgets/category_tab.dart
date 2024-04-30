@@ -13,43 +13,45 @@ class CategoryTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
-        shrinkWrap: true,
-        physics: const NeverScrollableScrollPhysics(),
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(TSizes.defaultSpace),
-            child: Column(
-              children: [
-                //Brands
-                const BrandShowcase(
-                  images: [
-                    TImages.productImage3,
-                    TImages.productImage2,
-                    TImages.productImage1,
-                  ],
-                ),
-                const BrandShowcase(
-                  images: [
-                    TImages.productImage3,
-                    TImages.productImage2,
-                    TImages.productImage1,
-                  ],
-                ),
-                //Products You may like
-                SectionHeading(
-                  title: "You Might Like",
-                  onPressed: () {},
-                ),
-                const SizedBox(
-                  height: TSizes.spaceBtwItems,
-                ),
-                GridLayout(
-                  itemCount: 4,
-                  itemBuilder: (_, index) => const ProductCardVertical(),
-                )
-              ],
-            ),
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
+      children: [
+        Padding(
+          padding: const EdgeInsets.all(TSizes.defaultSpace),
+          child: Column(
+            children: [
+              //Brands
+              const BrandShowcase(
+                images: [
+                  TImages.productImage3,
+                  TImages.productImage2,
+                  TImages.productImage1,
+                ],
+              ),
+              const BrandShowcase(
+                images: [
+                  TImages.productImage3,
+                  TImages.productImage2,
+                  TImages.productImage1,
+                ],
+              ),
+
+              //Products You may like
+              SectionHeading(
+                title: "You Might Like",
+                onPressed: () {},
+              ),
+              const SizedBox(
+                height: TSizes.spaceBtwItems,
+              ),
+              GridLayout(
+                itemCount: 4,
+                itemBuilder: (_, index) => const ProductCardVertical(),
+              )
+            ],
           ),
-        ]);
+        ),
+      ],
+    );
   }
 }

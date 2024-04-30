@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:iconsax/iconsax.dart';
 
-import '../../../utils/constants/colors.dart';
 import '../../../utils/constants/enums.dart';
 import '../../../utils/constants/sizes.dart';
 import 'brand_title_text.dart';

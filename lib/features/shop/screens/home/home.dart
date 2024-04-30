@@ -36,6 +36,8 @@ class HomeScreen extends StatelessWidget {
 
                   //Search Bar
                   SearchContainer(
+                    padding:
+                        EdgeInsets.symmetric(horizontal: TSizes.defaultSpace),
                     text: "Search in Store",
                     icon: Iconsax.search_normal,
                   ),

@@ -10,7 +10,7 @@ class TBottomSheetTheme {
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(16),
     ),
-    constraints: BoxConstraints(minWidth: double.infinity),
+    constraints: const BoxConstraints(minWidth: double.infinity),
   );
   static BottomSheetThemeData darkBottomSheetThemeData = BottomSheetThemeData(
     showDragHandle: true,
@@ -19,6 +19,6 @@ class TBottomSheetTheme {
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(16),
     ),
-    constraints: BoxConstraints(minWidth: double.infinity),
+    constraints: const BoxConstraints(minWidth: double.infinity),
   );
 }
