@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:t_store/utils/constants/colors.dart';
+import 'package:t_store/utils/helpers/helper_functions.dart';
 
 class SectionHeading extends StatelessWidget {
   const SectionHeading({
@@ -31,7 +33,14 @@ class SectionHeading extends StatelessWidget {
         if (showActionButton)
           TextButton(
             onPressed: onPressed,
-            child: Text(buttonTitle),
+            child: Text(
+              buttonTitle,
+              style: Theme.of(context).textTheme.labelMedium!.apply(
+                    color: THelperFunctions.isDarkMode(context)
+                        ? TColors.grey
+                        : TColors.primary,
+                  ),
+            ),
           ),
       ],
     );
