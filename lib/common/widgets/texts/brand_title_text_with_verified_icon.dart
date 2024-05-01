@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:t_store/utils/constants/colors.dart';
 
 import '../../../utils/constants/enums.dart';
 import '../../../utils/constants/sizes.dart';
@@ -10,7 +11,7 @@ class BrandTitleTextWithVerifiedIcon extends StatelessWidget {
   const BrandTitleTextWithVerifiedIcon({
     super.key,
     required this.title,
-    this.iconColor,
+    this.iconColor = TColors.primary,
     this.textColor,
     this.maxLines = 1,
     this.textAlign = TextAlign.center,
