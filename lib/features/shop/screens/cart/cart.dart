@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/get_navigation.dart';
 import 'package:t_store/common/widgets/appbar/appbar.dart';
 import 'package:t_store/common/widgets/texts/product_price_text.dart';
+import 'package:t_store/features/shop/screens/cart/widgets/cart_items.dart';
+import 'package:t_store/features/shop/screens/checkout/checkout.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
 
@@ -21,43 +25,15 @@ class CartScreen extends StatelessWidget {
           style: Theme.of(context).textTheme.headlineSmall,
         ),
       ),
+      body: const Padding(
+        padding: EdgeInsets.all(TSizes.defaultSpace),
+        child: CartItems(),
+      ),
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(TSizes.defaultSpace),
         child: ElevatedButton(
-          onPressed: () {},
+          onPressed: () => Get.to(() => const CheckoutScreen()),
           child: const Text("Checkout \$256.0"),
-        ),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(TSizes.defaultSpace),
-        child: ListView.separated(
-          shrinkWrap: true,
-          separatorBuilder: (_, __) => const SizedBox(
-            height: TSizes.spaceBtwSections,
-          ),
-          itemCount: 8,
-          itemBuilder: (_, index) => const Column(
-            children: [
-              CartItem(),
-              SizedBox(
-                height: TSizes.spaceBtwItems,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    children: [
-                      SizedBox(
-                        width: 70,
-                      ),
-                      ProductQuantityWithAddRemoveButton(),
-                    ],
-                  ),
-                  ProductPriceText(price: "256")
-                ],
-              )
-            ],
-          ),
         ),
       ),
     );
