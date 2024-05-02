@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 
@@ -24,10 +23,10 @@ class BillingAddressSection extends StatelessWidget {
         const SizedBox(
           height: TSizes.spaceBtwItems / 2,
         ),
-        Row(
+        const Row(
           children: [
-            const Icon(Icons.phone, color: Colors.grey, size: 16),
-            const SizedBox(
+            Icon(Icons.phone, color: Colors.grey, size: 16),
+            SizedBox(
               width: TSizes.spaceBtwItems,
             ),
             Text("+91 9327453256"),
@@ -36,10 +35,10 @@ class BillingAddressSection extends StatelessWidget {
         const SizedBox(
           height: TSizes.spaceBtwItems / 2,
         ),
-        Row(
+        const Row(
           children: [
-            const Icon(Icons.location_history, color: Colors.grey, size: 16),
-            const SizedBox(
+            Icon(Icons.location_history, color: Colors.grey, size: 16),
+            SizedBox(
               width: TSizes.spaceBtwItems,
             ),
             Expanded(

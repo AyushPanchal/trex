@@ -1,7 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:t_store/common/widgets/appbar/appbar.dart';
 import 'package:t_store/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:t_store/common/widgets/success_screen/success_screen.dart';
@@ -33,38 +31,38 @@ class CheckoutScreen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(TSizes.defaultSpace),
+          padding: const EdgeInsets.all(TSizes.defaultSpace),
           child: Column(
             children: [
-              CartItems(
+              const CartItems(
                 showAddRemoveButton: false,
               ),
-              SizedBox(
+              const SizedBox(
                 height: TSizes.spaceBtwSections,
               ),
 
               //Coupon text-field
-              CouponCode(),
-              SizedBox(
+              const CouponCode(),
+              const SizedBox(
                 height: TSizes.spaceBtwSections,
               ),
               //Billing Section
               RoundedContainer(
-                padding: EdgeInsets.all(TSizes.md),
+                padding: const EdgeInsets.all(TSizes.md),
                 showBorder: true,
                 backgroundColor: isDarkMode ? TColors.black : TColors.white,
-                child: Column(
+                child: const Column(
                   children: [
                     //pricing
                     BillingAmountSection(),
                     SizedBox(height: TSizes.spaceBtwItems),
 
                     //divider
-                    const Divider(),
+                    Divider(),
                     SizedBox(height: TSizes.spaceBtwItems),
 
                     //payment methods
-                    const BillingPaymentSection(),
+                    BillingPaymentSection(),
                     SizedBox(height: TSizes.spaceBtwItems),
 
                     //address
