@@ -20,7 +20,7 @@ class UserReviewCard extends StatelessWidget {
           children: [
             Row(
               children: [
-                CircleAvatar(
+                const CircleAvatar(
                   backgroundImage: AssetImage(TImages.userProfileImage1),
                 ),
                 const SizedBox(width: TSizes.spaceBtwItems),
@@ -77,7 +77,7 @@ class UserReviewCard extends StatelessWidget {
         RoundedContainer(
           backgroundColor: isDarkMode ? TColors.darkerGrey : TColors.grey,
           child: Padding(
-            padding: EdgeInsets.all(TSizes.md),
+            padding: const EdgeInsets.all(TSizes.md),
             child: Column(
               children: [
                 Row(

@@ -26,7 +26,7 @@ class StoreScreen extends StatelessWidget {
             "Store",
             style: Theme.of(context).textTheme.headlineMedium,
           ),
-          actions: [CartCounterIcon(onPressed: () {})],
+          actions: const [CartCounterIcon()],
         ),
         body: NestedScrollView(
           headerSliverBuilder: (_, innerBoxIsScrolled) => [
