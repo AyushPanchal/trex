@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_navigation/get_navigation.dart';
+import 'package:t_store/features/shop/screens/sub_category/sub_categories.dart';
 
 import '../../../../../common/widgets/image_text_widgets/vertical_image_text.dart';
 import '../../../../../utils/constants/image_strings.dart';
@@ -16,8 +19,11 @@ class HomeCategories extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         itemCount: 6,
         itemBuilder: (_, index) {
-          return const VerticalImageAndText(
-              image: TImages.shoeIcon, text: "Shoes");
+          return VerticalImageAndText(
+            image: TImages.shoeIcon,
+            text: "Shoes",
+            onPressed: () => Get.to(() => const SubCategoriesScreen()),
+          );
         },
       ),
     );
