@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:t_store/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:t_store/common/widgets/icons/circular_icon.dart';
@@ -13,7 +11,6 @@ import 'package:t_store/utils/helpers/helper_functions.dart';
 
 import '../../../../utils/constants/colors.dart';
 import '../../../../utils/constants/sizes.dart';
-import '../../../styles/shadow_style.dart';
 
 class ProductCardHorizontal extends StatelessWidget {
   const ProductCardHorizontal({super.key});
@@ -82,14 +79,14 @@ class ProductCardHorizontal extends StatelessWidget {
               SizedBox(
                 width: 165,
                 child: Padding(
-                  padding: EdgeInsets.only(
+                  padding: const EdgeInsets.only(
                     top: TSizes.sm,
                     left: TSizes.sm,
                     right: TSizes.sm,
                   ),
                   child: Column(
                     children: [
-                      Column(
+                      const Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           ProductTitleText(
@@ -105,7 +102,7 @@ class ProductCardHorizontal extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Flexible(child: ProductPriceText(price: "256.0")),
+                          const Flexible(child: ProductPriceText(price: "256.0")),
 
                           //
                           SizedBox(

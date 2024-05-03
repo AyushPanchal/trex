@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:t_store/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:t_store/utils/constants/colors.dart';
@@ -46,7 +44,7 @@ class OrderListItems extends StatelessWidget {
                 ),
                 IconButton(
                     onPressed: () {},
-                    icon: Icon(
+                    icon: const Icon(
                       Iconsax.arrow_right_34,
                       size: TSizes.iconSm,
                     ))
@@ -110,7 +108,7 @@ class OrderListItems extends StatelessWidget {
           ],
         ),
       ),
-      separatorBuilder: (_, __) => SizedBox(
+      separatorBuilder: (_, __) => const SizedBox(
         height: TSizes.spaceBtwItems,
       ),
       itemCount: 5,

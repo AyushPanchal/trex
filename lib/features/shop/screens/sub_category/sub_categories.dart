@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:t_store/common/widgets/appbar/appbar.dart';
 import 'package:t_store/common/widgets/images/rounded_image.dart';
@@ -13,21 +12,21 @@ class SubCategoriesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: TAppBar(
+      appBar: const TAppBar(
         title: Text("Sports"),
         showBackArrow: true,
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(TSizes.defaultSpace),
+          padding: const EdgeInsets.all(TSizes.defaultSpace),
           child: Column(
             children: [
-              RoundedImage(
+              const RoundedImage(
                 imageUrl: TImages.promoBanner3,
                 applyImageRadius: true,
                 width: double.infinity,
               ),
-              SizedBox(
+              const SizedBox(
                 height: TSizes.spaceBtwSections,
               ),
 
@@ -44,7 +43,7 @@ class SubCategoriesScreen extends StatelessWidget {
                   SizedBox(
                     height: 130,
                     child: ListView.separated(
-                      separatorBuilder: (_, __) => SizedBox(
+                      separatorBuilder: (_, __) => const SizedBox(
                         width: TSizes.spaceBtwItems,
                       ),
                       itemBuilder: (_, index) => const ProductCardHorizontal(),
